@@ -5,12 +5,10 @@ import java.util.Arrays;
 public class ArrayUtils {
 
     public static void printObjArray(Object[] objArr) {
-        System.out.println(Arrays.toString(objArr));
         // todo: implement this method
     }
 
     public static void printIntArray(int[] intArr) {
-        System.out.println(Arrays.toString(intArr));
         // todo: implement this method
     }
 
