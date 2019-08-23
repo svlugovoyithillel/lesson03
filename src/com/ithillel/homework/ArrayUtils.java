@@ -6,16 +6,16 @@ public class ArrayUtils {
 
     public static void printObjArray(Object[] objArr) {
         System.out.print("[");
-        for (Object anObjArr : objArr) {
-            System.out.print(anObjArr + " ");
+        for (int i = 0; i < objArr.length; i++){
+            System.out.print(objArr[i] + " ");
         }
         System.out.println("]");
     }
 
     public static void printIntArray(int[] intArr) {
         System.out.print("[");
-        for (int anIntArr : intArr) {
-            System.out.print(anIntArr + " ");
+        for (int i = 0; i< intArr.length; i++){
+            System.out.print(intArr[i] + " ");
         }
         System.out.println("]");
     }
