@@ -13,7 +13,7 @@ public class ArrayUtils {
     }
 
     public static int[] sortIntArray(int[] intArr) {
-        return new int[]{1, 2, 3, 4, 5};
+        return new int[]{1, 2, 3, 4, 5,6};
         // todo: implement this method
     }
 
