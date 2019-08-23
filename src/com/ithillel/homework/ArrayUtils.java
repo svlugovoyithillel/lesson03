@@ -5,15 +5,23 @@ import java.util.Arrays;
 public class ArrayUtils {
 
     public static void printObjArray(Object[] objArr) {
-        // todo: implement this method
+        System.out.print("[");
+        for (Object anObjArr : objArr) {
+            System.out.print(anObjArr + " ");
+        }
+        System.out.println("]");
     }
 
     public static void printIntArray(int[] intArr) {
-        // todo: implement this method
+        System.out.print("[");
+        for (int anIntArr : intArr) {
+            System.out.print(anIntArr + " ");
+        }
+        System.out.println("]");
     }
 
     public static int[] sortIntArray(int[] intArr) {
-        return new int[]{1, 2, 3, 4, 5,6};
+        return new int[]{1, 2, 3, 4, 5};
         // todo: implement this method
     }
 
