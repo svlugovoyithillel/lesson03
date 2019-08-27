@@ -14,7 +14,7 @@ public class ArrayUtils {
 
     public static int[] sortIntArray(int[] intArr) {
         return new int[]{1, 2, 3, 4, 5};
-        // todo: implement this method
+        /// todo: implement this method
     }
 
     public static int[] findMinAndMaxFromIntArray(int[] intArr) {
