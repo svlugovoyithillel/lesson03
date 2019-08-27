@@ -1,4 +1,6 @@
-package com.ithillel.homework;
+package ithillel.homework;
+
+import ithillel.homework.ArrayUtils;
 
 public class Demo {
 
@@ -37,7 +39,7 @@ public class Demo {
         ArrayUtils.printIntArray(mergedAndSortedInts);
 //        [1, 2, 3, 4, 5]
 
-        int[] updatedInts = ArrayUtils.removeElementFromIntArray(3, new int[]{1, 3, 5});
+        int[] updatedInts = ArrayUtils.removeElementFromIntArray(1, new int[]{1, 3, 5});
         ArrayUtils.printIntArray(updatedInts);
 //        [1, 5]
 

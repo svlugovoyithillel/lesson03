@@ -1,54 +1,71 @@
-package com.ithillel.homework;
+package ithillel.homework;
 
-import java.util.Arrays;
+import org.apache.commons.lang3.text.WordUtils;
+
+import java.util.Random;
+import java.util.stream.IntStream;
+
+import static java.lang.System.out;
+import static java.util.Arrays.stream;
+import static java.util.stream.Collectors.joining;
 
 public class ArrayUtils {
 
     public static void printObjArray(Object[] objArr) {
-        // todo: implement this method
+        stream(objArr).forEach(out::println);
     }
 
     public static void printIntArray(int[] intArr) {
-        // todo: implement this method
+        stream(intArr).forEach(out::println);
     }
 
     public static int[] sortIntArray(int[] intArr) {
-        return new int[]{1, 2, 3, 4, 5};
-        // todo: implement this method
+        return stream(intArr).sorted().toArray();
     }
 
     public static int[] findMinAndMaxFromIntArray(int[] intArr) {
-        return new int[]{-1, 1};
-        // todo: implement this method
+        int min = stream(intArr).min().getAsInt();
+        int max = stream(intArr).max().getAsInt();
+        return new int[]{min, max};
     }
 
     public static String toOneStringInCamelCase(String[] strArr) {
-        return null;
-        // todo: implement this method
+        //java 8
+//        return stream(strArr).map(s -> Character.toTitleCase(s.charAt(0)) + s.substring(1).toLowerCase())
+//                .collect(Collectors.joining());
+
+        //apache commons
+//        StringBuilder res = new StringBuilder();
+//        for (String s : strArr) {
+//            res.append(capitalizeFully(s));
+//        }
+//        return res.toString();
+
+        //java 8 + commons
+        return stream(strArr).map(WordUtils::capitalizeFully).collect(joining());
     }
 
     public static int calculateSumElementsInIntArray(int[] intArr) {
-        return 0;
-        // todo: implement this method
+        return stream(intArr).sum();
     }
 
     public static int[] mergeAndSortTwoIntArray(int[] ints1, int[] ints2) {
-        return new int[0];
-        // todo: implement this method
+        int[] merge = org.apache.commons.lang3.ArrayUtils.addAll(ints1, ints2);
+        return stream(merge).sorted().toArray();
     }
 
     public static int calculateAbsAverageElementValueInIntArray(int[] intArr) {
-        return 0;
-        // todo: implement this method
+        return (int) stream(intArr).map(Math::abs).summaryStatistics().getAverage();
     }
 
-    public static int[] removeElementFromIntArray(int i, int[] ints) {
-        return new int[0];
-        // todo: implement this method
+    public static int[] removeElementFromIntArray(int index, int[] ints) {
+        return IntStream.range(0, ints.length)
+                .filter(i -> i != index)
+                .map(i -> ints[i])
+                .toArray();
     }
 
     public static int[] generateRandomIntArrayWithSizeMinMax(int size, int min, int max) {
-        return new int[0];
-        // todo: implement this method
+        return new Random().ints(size, min, max).toArray();
     }
 }
