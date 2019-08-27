@@ -1,4 +1,6 @@
-package com.ithillel.homework;
+package ithillel.homework;
+
+import ithillel.homework.ArrayUtils;
 
 public class Demo {
 
