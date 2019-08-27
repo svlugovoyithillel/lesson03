@@ -11,6 +11,7 @@ public class Runner {
         e1.work();
         d1.work();
         e2.work();
+        e1.hello();
 
 
 
