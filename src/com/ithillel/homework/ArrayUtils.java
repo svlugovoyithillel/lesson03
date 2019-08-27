@@ -2,6 +2,9 @@ package ithillel.homework;
 
 import org.apache.commons.lang3.text.WordUtils;
 
+import java.util.Random;
+import java.util.stream.IntStream;
+
 import static java.lang.System.out;
 import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;
@@ -55,12 +58,14 @@ public class ArrayUtils {
         return (int) stream(intArr).map(Math::abs).summaryStatistics().getAverage();
     }
 
-    public static int[] removeElementFromIntArray(int i, int[] ints) {
-        return stream(ints);
+    public static int[] removeElementFromIntArray(int index, int[] ints) {
+        return IntStream.range(0, ints.length)
+                .filter(i -> i != index)
+                .map(i -> ints[i])
+                .toArray();
     }
 
     public static int[] generateRandomIntArrayWithSizeMinMax(int size, int min, int max) {
-        return new int[0];
-        // todo: implement this method
+        return new Random().ints(size, min, max).toArray();
     }
 }
