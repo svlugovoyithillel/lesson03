@@ -44,5 +44,7 @@ public class Demo {
         int[] generatedInts = ArrayUtils.generateRandomIntArrayWithSizeMinMax(5, 10, 100);
         ArrayUtils.printIntArray(generatedInts);
 //        [11, 33, 45, 99, 70]
+//        Прошу обратить внимание: т.к. это генерация рандомных чисел то цифры всегда
+//        разные.
     }
 }

@@ -1,62 +1,98 @@
 package com.ithillel.homework;
 
+
+import sun.plugin.javascript.navig.Array;
+
 import java.util.Arrays;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class ArrayUtils {
 
     public static void printObjArray(Object[] objArr) {
-        System.out.print("[");
-        for (int i = 0; i < objArr.length; i++){
-            System.out.print(objArr[i] + " ");
-        }
-        System.out.println("]");
+
+        System.out.println(Arrays.toString(objArr));
+
     }
 
     public static void printIntArray(int[] intArr) {
-        System.out.print("[");
-        for (int i = 0; i< intArr.length; i++){
-            System.out.print(intArr[i] + " ");
-        }
-        System.out.println("]");
+
+        System.out.println(Arrays.toString(intArr));
+
     }
 
     public static int[] sortIntArray(int[] intArr) {
-        return new int[]{1, 2, 3, 4, 5};
-        // todo: implement this method
+        Arrays.sort(intArr);
+        return intArr;
     }
 
     public static int[] findMinAndMaxFromIntArray(int[] intArr) {
-        return new int[]{-1, 1};
-        // todo: implement this method
+        Arrays.sort(intArr);
+        return new int[]{intArr[0], intArr[intArr.length-1]};
+
+
     }
 
     public static String toOneStringInCamelCase(String[] strArr) {
-        return null;
-        // todo: implement this method
+        String s = "";
+        for (int i = 0; i < strArr.length; i++) {
+            s += strArr[i].substring(0,1).toUpperCase() + strArr[i].substring(1);
+        }
+        return s;
+
     }
 
     public static int calculateSumElementsInIntArray(int[] intArr) {
-        return 0;
-        // todo: implement this method
+        int sum = 0;
+        for (int i = 0; i < intArr.length; i++) {
+            sum += intArr[i];
+        }
+        return sum;
+
     }
 
     public static int[] mergeAndSortTwoIntArray(int[] ints1, int[] ints2) {
-        return new int[0];
-        // todo: implement this method
+        int[] array = new int[ints1.length + ints2.length];
+        System.arraycopy(ints1,0, array,0,ints1.length);
+        System.arraycopy(ints2,0,array,ints1.length,ints2.length);
+        Arrays.sort(array);
+
+        return array;
+
     }
 
     public static int calculateAbsAverageElementValueInIntArray(int[] intArr) {
-        return 0;
-        // todo: implement this method
+        int sum = 0;
+        for (int i = 0; i < intArr.length; i++) {
+            sum+=Math.abs(intArr[i]);
+        }
+        return sum/intArr.length;
+
     }
 
     public static int[] removeElementFromIntArray(int i, int[] ints) {
-        return new int[0];
-        // todo: implement this method
+
+
+        int[] newArray = new int[ints.length - 1];
+        for (int j = 0; j < newArray.length; j++) {
+                if (ints[j]!=i){
+                    newArray[j] = ints[j];
+                }else  newArray[j] = ints[j+1];
+            }
+
+return newArray;
+
+
     }
 
+
+
+
     public static int[] generateRandomIntArrayWithSizeMinMax(int size, int min, int max) {
-        return new int[0];
-        // todo: implement this method
+        int []random = new int[size];
+        for (int i = 0; i < random.length; i++) {
+            random[i] = ThreadLocalRandom.current().nextInt(min,max + 1);
+        }
+
+        return random;
     }
 }
