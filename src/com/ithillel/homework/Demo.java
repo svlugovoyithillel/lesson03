@@ -2,12 +2,14 @@ package com.ithillel.homework;
 
 public class Demo {
 
+
     public static void main(String[] args) {
 
         int[] intArr = { 10, 20, 15, 22, 35, -100, 1, 250, 55, -52 };
         String[] strArr = { "hello", "world", "java", "python", "kotlin" };
 
         ArrayUtils.printIntArray(intArr);
+
 //        [10, 20, 15, 22, 35, -100, 1, 250, 55, -52]
 
         ArrayUtils.printObjArray(strArr);
