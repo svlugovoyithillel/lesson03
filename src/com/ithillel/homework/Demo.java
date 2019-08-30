@@ -5,7 +5,7 @@ public class Demo {
     public static void main(String[] args) {
 
         int[] intArr = { 10, 20, 15, 22, 35, -100, 1, 250, 55, -52 };
-        String[] strArr = { "hello", "world", "java", "python", "kotlin" };
+        String[] strArr = { "hello","world", "java", "python", "kotlin" };
 
         ArrayUtils.printIntArray(intArr);
 //        [10, 20, 15, 22, 35, -100, 1, 250, 55, -52]
@@ -15,7 +15,8 @@ public class Demo {
 
         int[] sortedInts = ArrayUtils.sortIntArray(intArr);
         ArrayUtils.printIntArray(sortedInts);
-//        [-100, -52, 1, 10, 15, 20, 22, 35, 55, 250]
+
+//          [-100, -52, 1, 10, 15, 20, 22, 35, 55, 250]
 
         int[] minAndMaxInts = ArrayUtils.findMinAndMaxFromIntArray(intArr);
         ArrayUtils.printIntArray(minAndMaxInts);
