@@ -31,7 +31,7 @@ public class Demo {
 
         int avg = ArrayUtils.calculateAbsAverageElementValueInIntArray(intArr); // берем абсолютные значения (без учета знака)
         System.out.println(avg);
-//        56
+//        560
 
         int[] mergedAndSortedInts = ArrayUtils.mergeAndSortTwoIntArray(new int[]{1, 3, 5}, new int[]{2, 4});
         ArrayUtils.printIntArray(mergedAndSortedInts);
