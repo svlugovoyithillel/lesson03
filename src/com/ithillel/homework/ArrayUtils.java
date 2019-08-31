@@ -77,19 +77,25 @@ public class ArrayUtils {
     }
 
     public static int[] removeElementFromIntArray(int i, int[] ints) {
-        ArrayList <Integer>res = (ArrayList) Arrays.asList(ints);
-        for (int x: res) {
-          if(x==i)
-              res.remove(x);
+        List <Integer> temp = new ArrayList<Integer>();
+        for (int j = 0; j < ints.length; j++) {
+            if(ints[j] != i)
+               temp.add(ints[j]);
         }
-        int[] result = new int[res.size()];
-
-        return null;
+        int[] result = new int[temp.size()];
+        for (int j = 0; j <temp.size(); j++) {
+            result[j] = temp.get(j);
+        }
+        return result;
         // todo: implement this method
     }
 
     public static int[] generateRandomIntArrayWithSizeMinMax(int size, int min, int max) {
-        return new int[0];
+        int[] array = new int[size];
+        for (int i = 0; i <array.length; i++)
+            array[i] = min + (int) (Math.random()*100);
+
+        return array;
         // todo: implement this method
     }
 }
