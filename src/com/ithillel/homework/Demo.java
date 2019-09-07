@@ -8,7 +8,7 @@ public class Demo {
         String[] strArr = { "hello", "world", "java", "python", "kotlin" };
 
         ArrayUtils.printIntArray(intArr);
-//        [10, 20, 15, 22, 35, -100, 1, 250, 55, -52]
+///        [10, 20, 15, 22, 35, -100, 1, 250, 55, -52]
 
         ArrayUtils.printObjArray(strArr);
 //        [hello, world, java, python, kotlin]
