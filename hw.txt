@@ -1,0 +1,99 @@
+public class ArrayUtils {
+
+    public static void printObjArray(Object[] objArr) {
+        // todo: implement this method
+         for (int i = 0; i < ObjArr.length; i++) {
+            System.out.print(ObjArr[i] + ", ");
+        }
+        System.out.print("\n");
+    }
+
+    public static void printIntArray(int[] intArr) {
+        // todo: implement this method
+        for (int i = 0; i < intArr.length; i++) {
+            System.out.print(intArr[i] + ", ");
+        }
+        System.out.print("\n");
+    }
+
+    public static int[] sortIntArray(int[] intArr) {
+        // todo: implement this method
+	int y, Swap;
+       for(int i=0;i<intArr.length;i++){
+	y=i;
+      	for(int j=i;j<intArr.length;j++)
+        if(intArr[j]<intArr[y]) y=j;
+      	Swap=intArr[i];
+      	intArr[i]=intArr[y];
+      	intArr[y]=Swap;
+    }
+	return intArr;
+    }
+
+    public static int[] findMinAndMaxFromIntArray(int[] intArr) {
+        // todo: implement this method
+        int mas[] = Arrays.copyOf(intArr, intArr.length);
+        int min=0;
+        int max=0;
+       for (int i = 1; i < mas.length; i++) {
+      	if (mas[i] < mas[min]) {min = i;continue;}
+      	if (mas[i] > mas[max]) max = i;
+      }
+        return new int[]{mas[min], mas[max]};
+    }
+
+    public static String toOneStringInCamelCase(String[] strArr) {
+        // todo: implement this method
+        String stringInCamel = strArr[0];
+        for (int i = 1; i < strArr.length; i++)
+            stringInCamel += strArr[i];
+        return stringInCamel;
+    }
+
+    public static int calculateSumElementsInIntArray(int[] intArr) {
+        // todo: implement this method
+	int sum=0;
+        for (int i = 0; i < intArr.length; i++)
+            sum += intArr[i];
+        return sum;
+    }
+
+    public static int[] mergeAndSortTwoIntArray(int[] ints1, int[] ints2) {
+        // todo: implement this method
+        int combined[] = new int[array1.length+array2.length];
+    	for(int i=0;i<combined.length;i++){
+     	 if(i<array1.length) combined[i]=array1[i];
+      	 else combined[i]=array2[i-array1.length];
+   	}
+	sortIntArray(combined);
+        return combined;
+    }
+
+    public static int calculateAbsAverageElementValueInIntArray(int[] intArr) {
+        // todo: implement this method
+       int sum = 0;
+    	for (int i = 0; i < intArr.length; i++)
+     	 sum += intArr[i];
+   	return sum/intArr.length;
+    }
+
+    public static int[] removeElementFromIntArray(int i, int[] ints) {
+        // todo: implement this method
+        int[] updatedInts = new int[ints.length - 1];
+   	for (int j = 0; j < updatedInts.length; j++) {
+     	 if (ints[j] >= i) updatedInts[j]=ints[j+1];
+      	 else updatedInts[j]=ints[j];
+	}
+   	 return updatedInts;
+    }
+
+    public static int[] generateRandomIntArrayWithSizeMinMax(int size, int min, int max) {
+        // todo: implement this method
+        int Arr[] = new int[size];
+        for (int i = 0; i < Arr.length; i++) {
+            Arr[i] = (int) ((Math.random() * (max - min)) + min);
+        }
+        return Arr;
+    }
+}
+}
